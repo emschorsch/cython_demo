@@ -6,10 +6,13 @@
 
 cdef class Roster:
     cdef str location
-    #cdef public players
+    cdef public players
     # cdef public player.Player players  # this doesn't work
     # cdef public player.Player[] players # how do I declare a list of Players?
+    # cdef public player.Player cur_player
+    cdef public cur_player
 
     def __init__(self, location="DEFAULT", players=None):
         self.location = location
         self.players = players
+        self.cur_player = players[0]
