@@ -1,4 +1,5 @@
 cdef class Player:
-    cdef public name
-    cdef public int age
+    cdef:
+        public str name
+        public int age
 
